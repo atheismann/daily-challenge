@@ -88,7 +88,12 @@ sumNumbers([]) //=> 0
 -----------------------------------------------------------------*/
 // Your solution for 03-sumNumbers here:
 
-
+function sumNumbers(arr) {
+  if(arr.length === 0) {
+    return 0;
+  }
+  return arr.reduce((acc, sum) => acc + sum)
+}
 
 
 
@@ -111,7 +116,13 @@ add(7,-12) //=> -5
 -----------------------------------------------------------------*/
 // Your solution for 04-addList here:
 
-
+function addList() {
+  var sum = 0;
+  for (var i = 0; i < arguments.length; i++) {
+    sum += arguments[i];
+  }
+  return sum;
+}
 
 
 
@@ -135,7 +146,14 @@ computeRemainder(10.5, 3) //=> 1.5
 -----------------------------------------------------------------*/
 // Your solution for 05-computeRemainder:
 
+function computeRemainder(num1, num2) {
 
+  if(num2 > 0) {
+    return num1 % num2;
+  } else {
+    return Infinity
+  }
+}
 
 
 
@@ -158,7 +176,16 @@ range(5,2) //=> "First argument must be less than second"
 -----------------------------------------------------------------*/
 // Your solution for 06-range here:
 
-
+function range(num1, num2) {
+ let arr = [];
+ if (num1 > num2) {
+   return 'First argument must be less than second';
+ } 
+  for(let i = num1; i < num2; i++){
+    arr.push(i);
+  }
+  return arr;
+}
 
 
 
