@@ -227,7 +227,9 @@ removeEnds('a'); //=> "" (empty string)
 -----------------------------------------------------------------*/
 // Your solution for 08-removeEnds here:
 
-
+function removeEnds(str) {
+  return str.length < 3 ? '' : str.substring(1, str.length -1);
+}
 
 
 
