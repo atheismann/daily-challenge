@@ -252,7 +252,14 @@ charCount('Today is fantastic!') //=> { T: 1, o: 1, d: 1, a: 3, y: 1, ' ': 2, i:
 -----------------------------------------------------------------*/
 // Your solution for 09-charCount here:
 
-
+function charCount(str) {
+  let obj = {};
+  let arr = str.split('');
+  arr.forEach(character => {
+    obj[character] ? obj[character] ++ : obj[character] = 1
+  })
+  return obj;
+};
 
 
 
