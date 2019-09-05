@@ -285,7 +285,14 @@ formatWithPadding(1234, '*', 3); //=> "1234"
 -----------------------------------------------------------------*/
 // Your solution for 10-formatWithPadding here:
 
-
+function formatWithPadding(str, pad, amt) {
+  let str2 = str.toString();
+  if(str2.length >= amt){
+    return str2;
+  }
+  let leftPadding = pad.repeat(amt - str2.length);
+  return `${leftPadding}${str2}`
+}
 
 
 
@@ -310,7 +317,14 @@ isPalindrome(''); //=> true
 -----------------------------------------------------------------*/
 // Your solution for 11-isPalindrome here:
 
-
+function isPalindrome (str){
+  let reverseStr = str.split('').reverse().join('');
+  if(str.replace(/\s/g, '').toLowerCase() === reverseStr.replace(/\s/g, '').toLowerCase()){
+    return true;
+  } else {
+    return false;
+  }
+}
 
 
 
@@ -359,7 +373,11 @@ mumble('121'); //=> '1-22-111'
 mumble('!A 2'); //=> '!-AA-   -2222'
 -----------------------------------------------------------------*/
 // Your solution for 13-mumble here:
-
+ function mumble(str){
+   return str = str.split('').map(function(el, idx){
+    return el.repeat(idx + 1)
+   }).join('-');
+ }
 
 
 
