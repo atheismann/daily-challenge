@@ -428,7 +428,14 @@ mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44});  //=> {a: 1, b: 22, c:
 -----------------------------------------------------------------*/
 // Your solution for 15-mergeObjects here:
 
-
+function mergeObjects(target,...objects){
+  objects.forEach(function (object){
+    for(key in object){
+      target[key] = object[key]
+    };
+  });
+    return target;
+};
 
 
 
