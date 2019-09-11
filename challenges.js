@@ -472,9 +472,17 @@ findHighestPriced([
 -----------------------------------------------------------------*/
 // Your solution for 16-findHighestPriced here:
 
-
-
-
+function findHighestPriced(arr){
+  let result;
+  let highestPrice = 0;
+  arr.forEach(function(arry){
+    if(arry.price > highestPrice){
+      highestPrice = arry.price;
+      result = arry;
+    }
+  });
+      return result;
+};
 
 /*-----------------------------------------------------------------
 Challenge: 17-mapArray
@@ -503,6 +511,13 @@ mapArray( ['rose', 'tulip', 'daisy'], function(f, i) {
 -----------------------------------------------------------------*/
 // Your solution for 17-mapArray here:
 
+function mapArray(array, callback){
+  const newArr = [];
+  for(let i = 0; i < array.length; i++){
+    newArr.push(callback(array[i], i));
+  };
+  return newArr;
+}
 
 
 
