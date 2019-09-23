@@ -569,8 +569,6 @@ function reduceArray(arr, cb, initAcc) {
   return acc;
 }
 
-
-
 /*-----------------------------------------------------------------
 Challenge: 19-flatten
 
